@@ -51,7 +51,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class CI_Router {
 
 	public $config;
-	public $uri; // 👈 TAMBAHKAN INI
+	public $uri;
 
 	public $routes = array();
 	public $class = '';
