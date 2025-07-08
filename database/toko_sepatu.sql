@@ -128,7 +128,7 @@ INSERT INTO `customers` (`id`, `user_id`, `name`, `phone_number`, `address`, `pr
 (7, 8, 'Pembeli1', '087741130522', 'Jln. Merdeka Barat- Jakarta Indonesia', NULL),
 (8, 10, 'Pembeli2', '087741160520', 'Jln. Merdeka Barat- Jakarta Indonesia', NULL),
 (9, 11, 'Pembeli4', '0870000000', 'Jln.Merdeka Barat - Jakarta', NULL),
-(10, 12, 'revan', '081287702224', 'Bekasi', NULL);
+(10, 12, 'harfian', '081287702224', 'Bekasi', NULL);
 
 -- --------------------------------------------------------
 
@@ -336,8 +336,8 @@ INSERT INTO `settings` (`id`, `key`, `content`) VALUES
 (2, 'store_name', 'Premium Shoes Store'),
 (3, 'store_phone_number', ''),
 (4, 'store_email', ''),
-(5, 'store_tagline', 'Belanja Buah Segar Segar 24 Jam'),
-(6, 'store_logo', 'Logo.png'),
+(5, 'store_tagline', 'Belanja 24 Jam'),
+(6, 'store_logo', 'admin.png'),
 (7, 'max_product_image_size', '20000'),
 (8, 'store_description', 'Belanja buah segar dengan murah, mudah dan cepat'),
 (9, 'store_address', ''),
@@ -368,11 +368,11 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `username`, `password`, `profile_picture`, `role_id`, `register_date`) VALUES
-(7, 'Revan Ali', 'admintokobuah@gmail.com', NULL, 'admin', '$2y$10$bOEcDKnmkPiGPX9hN3nT6uNZPSgBDC8pssLaUTGMQ4ZCRPn2ueUHa', '0919f092a8487492631bc84b592a4b0a_icon-wajah1.png', 1, '2020-03-29 08:14:30'),
+(7, 'Rizqi Harfian', 'admintokobuah@gmail.com', NULL, 'admin', '$2y$10$bOEcDKnmkPiGPX9hN3nT6uNZPSgBDC8pssLaUTGMQ4ZCRPn2ueUHa', '0919f092a8487492631bc84b592a4b0a_icon-wajah1.png', 1, '2020-03-29 08:14:30'),
 (8, NULL, 'pembeli@gmail.com', NULL, 'user1', '$2y$10$chkZ5TH8JoBetrJYsujw9eHTSgnp1iLG492o99duNcoYGIVGYP8Lu', NULL, 2, '2020-10-26 06:58:43'),
 (10, NULL, 'pembeli2@gmail.com', NULL, 'user2', '$2y$10$BxWbJrsGG.grhKvrNQ6XvOU5lTPARmLOo58Rwuws1kFlze3r4YR1.', NULL, 2, '2020-10-26 07:15:59'),
 (11, NULL, 'pembeli4@gmail.com', NULL, 'user4', '$2y$10$P25c7AP7HzotHYvRCvi8XukFH/wKW/IR0uBbOM9pPBKAif8WrR.Iu', NULL, 2, '2020-10-26 08:37:06'),
-(12, NULL, 'roko@gmail.com', NULL, 'revan', '$2y$10$XZgGVjLwNWEZDSr3uGyRgOYbCasZCBHFmu60/psm09kE/vWb6rO6S', NULL, 2, '2022-04-10 01:45:48');
+(12, NULL, 'roko@gmail.com', NULL, 'harfian', '$2y$10$XZgGVjLwNWEZDSr3uGyRgOYbCasZCBHFmu60/psm09kE/vWb6rO6S', NULL, 2, '2022-04-10 01:45:48');
 
 --
 -- Indexes for dumped tables
