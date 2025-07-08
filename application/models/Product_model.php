@@ -47,11 +47,17 @@ class Product_model extends CI_Model {
     }
 
     public function create_order(Array $data)
-    {
-        $this->db->insert('orders', $data);
+{
+    $this->db->insert('orders', $data);
 
-        return $this->db->insert_id();
+    if (!$this->db->affected_rows()) {
+        // Log detail query error
+        log_message('error', 'QUERY ERROR: ' . $this->db->last_query());
+        log_message('error', 'DB ERROR: ' . print_r($this->db->error(), true));
     }
+
+    return $this->db->insert_id();
+}
 
     public function create_order_items($data)
     {

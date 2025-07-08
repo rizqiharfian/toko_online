@@ -148,10 +148,12 @@ class Shop extends CI_Controller {
                 get_footer();
             break;
             case 'order' :
-                $quantity = $this->session->userdata('order_quantity');
+    $quantity = $this->session->userdata('order_quantity');
 
-                $user_id = get_current_user_id();
-                $coupon_id = $this->session->userdata('coupon_id');
+    $user_id = get_current_user_id();
+    log_message('error', 'USER ID SEKARANG: ' . $user_id); // ← Tambahkan baris ini
+
+    $coupon_id = $this->session->userdata('coupon_id');
                 $order_number = $this->_create_order_number($quantity, $user_id, $coupon_id);
                 $order_date = date('Y-m-d H:i:s');
                 $total_price = $this->session->userdata('total_price');
@@ -174,7 +176,7 @@ class Shop extends CI_Controller {
 
                 $delivery_data = json_encode($delivery_data);
 
-                $order = array(
+                $order_data = array(
                     'user_id' => $user_id,
                     'coupon_id' => $coupon_id,
                     'order_number' => $order_number,
@@ -186,17 +188,23 @@ class Shop extends CI_Controller {
                     'delivery_data' => $delivery_data
                 );
 
-                $order = $this->product->create_order($order);
+                $order_id = $this->product->create_order($order_data);
 
-                $n = 0;
+                if (!$order_id) {
+                    log_message('error', 'GAGAL INSERT ORDER: '. print_r($order_data, true));
+                    log_message('error', 'DB ERROR: '. print_r($this->db->error(), true));
+                    show_error('Gagal membuat pesanan, silakan coba lagi');
+                }
+
+                $items = [];
                 foreach ($quantity as $id => $data)
                 {
-                    $items[$n]['order_id'] = $order;
-                    $items[$n]['product_id'] = $id;
-                    $items[$n]['order_qty'] = $data['qty'];
-                    $items[$n]['order_price'] = $data['price'];
-
-                    $n++;
+                    $items[] = array(
+                        'order_id' => $order_id,
+                        'product_id' => $id,
+                        'order_qty' => $data['qty'],
+                        'order_price' => $data['price']
+                    );
                 }
 
                 $this->product->create_order_items($items);
@@ -208,7 +216,7 @@ class Shop extends CI_Controller {
 
                 $this->session->set_flashdata('order_flash', 'Order berhasil ditambahkan');
 
-                redirect('customer/orders/view/'. $order);
+                redirect('customer/orders/view/'. $order_id);
             break;
         }
 

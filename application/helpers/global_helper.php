@@ -93,20 +93,21 @@ if ( ! function_exists('get_user_image'))
         $user = $CI->db->query("
             SELECT u.*, c.*
             FROM users u
-            JOIN customers c
-                ON c.user_id = u.id
+            JOIN customers c ON c.user_id = u.id
             WHERE u.id = '$id'
         ")->row();
 
         $picture = $user->profile_picture;
-        $file = './assets/uploads/users/'. $picture;
+        $file = './assets/uploads/users/' . $picture;
 
-        if ( ! file_exists($file))
+        // ✅ Jika file ADA, tampilkan; jika tidak, pakai admin.png
+        if (file_exists($file) && !empty($picture)) {
             $picture_name = $picture;
-        else
+        } else {
             $picture_name = 'admin.png';
+        }
 
-        return base_url('assets/uploads/users/'. $picture_name);
+        return base_url('assets/uploads/users/' . $picture_name);
     }
 }
 

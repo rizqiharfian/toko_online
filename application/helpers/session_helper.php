@@ -20,52 +20,43 @@ if ( ! function_exists('user_data')) {
     }
 }
 
-if( ! function_exists('session_data'))
+function session_data()
 {
-    function session_data()
-    {
-        $CI = init();
+    $ci = &get_instance();
 
-        $CI->load->library('encryption');
-        $CI->load->helper('cookie');
-
-        $read_session_in_cookie = get_cookie('__ACTIVE_SESSION_DATA');
-        $read_session_in_session = $CI->session->userdata('__ACTIVE_SESSION_DATA');
-
-        if ($read_session_in_cookie)
-        {
-            $read_data = $CI->encryption->decrypt($read_session_in_cookie);
-            $read_data = json_decode($read_data);
-
-            return $read_data;
-        }
-        else if ($read_session_in_session)
-        {
-            $read_data = $CI->encryption->decrypt($read_session_in_session);
-            $read_data = json_decode($read_data);
-
-            return $read_data;
-        }
-        else {
-            $default_session = new stdClass();
-
-            $default_session->is_login = FALSE;
-            $default_session->user_id = 0;
-            $default_session->login_at = 0;
-            $default_session->remember_me = FALSE;
-
-            return $default_session;
-        }
+    // Tambahkan ini jika belum
+    if (!isset($ci->encryption)) {
+        $ci->load->library('encryption');
     }
+
+    $session_encrypted = $ci->session->userdata('__ACTIVE_SESSION_DATA');
+    if (!$session_encrypted) {
+        $session_encrypted = $ci->input->cookie('__ACTIVE_SESSION_DATA');
+    }
+
+    if ($session_encrypted) {
+        $session_data = $ci->encryption->decrypt($session_encrypted);
+        return json_decode($session_data);
+    }
+
+    return (object) ['user_id' => 0];
 }
 
 if ( ! function_exists('is_login'))
 {
     function is_login()
     {
-        $login_data = session_data();
+        $CI =& get_instance();
+        $session_data = $CI->session->userdata('__ACTIVE_SESSION_DATA');
 
-        return ($login_data->is_login === TRUE);
+        if ($session_data) {
+            $decrypted = $CI->encryption->decrypt($session_data);
+            $login_data = json_decode($decrypted);
+
+            return isset($login_data->is_login) && $login_data->is_login === TRUE;
+        }
+
+        return FALSE;
     }
 }
 
@@ -73,9 +64,17 @@ if ( ! function_exists('get_current_user_id'))
 {
     function get_current_user_id()
     {
-        $login_data = session_data();
+        $CI =& get_instance();
+        $session_data = $CI->session->userdata('__ACTIVE_SESSION_DATA');
 
-        return $login_data->user_id;
+        if ($session_data) {
+            $decrypted = $CI->encryption->decrypt($session_data);
+            $login_data = json_decode($decrypted);
+
+            return isset($login_data->user_id) ? $login_data->user_id : 0;
+        }
+
+        return 0;
     }
 }
 
