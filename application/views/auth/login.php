@@ -6,14 +6,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>Premium shoses store</title>
+        <title>DRCOM Store</title>
 
         <link href="<?php echo get_theme_uri('custom/auth/login/css/style.css'); ?>" rel="stylesheet" type="text/css" />
         <link href="<?php echo get_theme_uri('custom/auth/login/css/fontawesome-all.css'); ?>" rel="stylesheet" />
         <link href="//fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
     </head>
     <body>
-        <h1>Login ke- Premium Shoes Store</h1>
+        <h1>DRCOM Store</h1>
         <div class=" w3l-login-form">
             <h2>Login Akun</h2>
             <?php if ($flash_message) : ?>
@@ -57,7 +57,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
 	
         <footer>
-            <p class="copyright-agileinfo"> &copy; Premium Shoes Store </p>
+            <p class="copyright-agileinfo"> &copy; DRCOM Store </p>
         </footer>
 
     </body>

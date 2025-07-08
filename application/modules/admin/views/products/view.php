@@ -164,6 +164,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   </div>
 </div>
 
+<style>
+.table td {
+  word-wrap: break-word;
+  white-space: normal;
+  max-width: 100px; /* batasi agar teks membungkus */
+}
+</style>
+
 <script>
     $('#deleteProductForm').submit(function(e) {
         e.preventDefault();

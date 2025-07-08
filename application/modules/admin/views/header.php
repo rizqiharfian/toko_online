@@ -6,7 +6,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
  
-   <title>Premium Shoes Store</title>
+   <title>DRCOM Store</title>
    <!-- Favicon -->
    <link rel="icon" href="<?php echo get_theme_uri('img/brand/favicon.png', 'argon'); ?>" type="image/png">
    <!-- Fonts -->
@@ -30,7 +30,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
        <!-- Brand -->
        <div class="sidenav-header d-flex align-items-center">
          <a class="navbar-brand" href="<?php echo base_url(); ?>">
-		 Premium Shoes Store
+		 DRCOM Store
          </a>
          <div class="ml-auto">
            <!-- Sidenav toggler -->

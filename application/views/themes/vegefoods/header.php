@@ -49,7 +49,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					    </div>
 					    <div class="col-md pr-4 d-flex topper align-items-center">
 					    	<div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
-						    <span class="text">Premiumshoesstore@gmail.com</span>
+						    <span class="text">Drcomstore@gmail.com</span>
 					    </div>
 					    <div class="col-md-5 pr-4 d-flex topper align-items-center text-lg-right">
 						    <span class="text">Ayo Segera Belanja Sekarang</span>
@@ -61,7 +61,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </div>
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
-	      <a class="navbar-brand" href="<?php echo base_url(); ?>">Premium Shoes Store</a>
+	      <a class="navbar-brand" href="<?php echo base_url(); ?>">DRCOM Store</a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>

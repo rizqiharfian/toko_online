@@ -51,7 +51,6 @@ class Product_model extends CI_Model {
     $this->db->insert('orders', $data);
 
     if (!$this->db->affected_rows()) {
-        // Log detail query error
         log_message('error', 'QUERY ERROR: ' . $this->db->last_query());
         log_message('error', 'DB ERROR: ' . print_r($this->db->error(), true));
     }

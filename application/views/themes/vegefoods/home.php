@@ -9,8 +9,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
 
           <div class="col-md-12 ftco-animate text-center">
-            <h1 class="mb-2">Premium Shoes Store</h1>
-            <h2 class="subheading mb-4">AGEN SEPATU BERKUALITAS</h2>
+            <h1 class="mb-2">DRCOM Store</h1>
+            <h2 class="subheading mb-4">Laptop Murah dan Berkualitas</h2>
             <p><a href="#products" class="btn btn-primary">Belanja Sekarang</a></p>
           </div>
 
@@ -24,8 +24,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
 
           <div class="col-sm-12 ftco-animate text-center">
-            <h1 class="mb-2">Premium Shoes Store</h1>
-            <h2 class="subheading mb-4">Supplier sepatu trendy dan kekinian</h2>
+            <h1 class="mb-2">DRCOM Store</h1>
+            <h2 class="subheading mb-4">Harga Mulai dari 1 Jutaan</h2>
             <p><a href="#products" class="btn btn-primary">Belanja Sekarang</a></p>
           </div>
 
@@ -45,7 +45,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
         <div class="media-body">
           <h3 class="heading">Gratis Ongkir</h3>
-          <span>Belanja minimal Rp <?php echo format_rupiah(get_settings('min_shop_to_free_shipping_cost')); ?></span>
+          <span>Belanja minimal 1 Jutaan</span>
         </div>
       </div>      
     </div>
@@ -56,7 +56,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
         <div class="media-body">
           <h3 class="heading">Selalu Ready</h3>
-          <span>Sepatu Berkualitas</span>        </div>
+          <span>Laptop Berkualitas</span>        </div>
       </div>    
     </div>
     <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
@@ -66,7 +66,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
         <div class="media-body">
           <h3 class="heading">Kualitas Terbaik</h3>
-          <span> Sepatu yang kami jual menggunakan material berkualitas</span>        </div>
+          <span> Laptop yang kami jual Original 100%</span>        </div>
       </div>      
     </div>
     <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
@@ -90,8 +90,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <div class="row justify-content-center mb-3 pb-3">
     <div class="col-md-12 heading-section text-center ftco-animate">
         <span class="subheading">Produk Terbaru</span>
-      <h2 class="mb-4">Premium Shoes Store</h2>
-      <p>Sepatu murah berkualitas</p>
+      <h2 class="mb-4">DRCOM Store</h2>
+      <p>Laptop murah berkualitas</p>
     </div>
   </div>   		
   </div>

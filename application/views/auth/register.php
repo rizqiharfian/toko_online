@@ -13,7 +13,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <meta name="keywords" content="Colorlib Templates">
 
     <!-- Title Page-->
-    <title>Daftar dan Buat Akun | Premium Shoes Store</title>
+    <title>Daftar dan Buat Akun | DRCOM Store</title>
 
     <!-- Icons font CSS-->
     <link href="<?php echo get_theme_uri('custom/auth/register/vendor/mdi-font/css/material-design-iconic-font.min.css'); ?>" rel="stylesheet" media="all">

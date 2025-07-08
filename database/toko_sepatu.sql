@@ -333,7 +333,7 @@ CREATE TABLE `settings` (
 
 INSERT INTO `settings` (`id`, `key`, `content`) VALUES
 (1, 'current_theme_name', 'vegefoods'),
-(2, 'store_name', 'Premium Shoes Store'),
+(2, 'store_name', 'DRCOM Store'),
 (3, 'store_phone_number', ''),
 (4, 'store_email', ''),
 (5, 'store_tagline', 'Belanja 24 Jam'),
@@ -343,7 +343,7 @@ INSERT INTO `settings` (`id`, `key`, `content`) VALUES
 (9, 'store_address', ''),
 (10, 'min_shop_to_free_shipping_cost', '20000'),
 (11, 'shipping_cost', '5000'),
-(12, 'payment_banks', '{\"mandiri\":{\"bank\":\"Mandiri\",\"number\":\"1234567890\",\"name\":\"Premium Shoes Store\"},\"bca\":{\"bank\":\"BCA\",\"number\":\"0987654321\",\"name\":\"Premium Shoes Store\"}}');
+(12, 'payment_banks', '{\"mandiri\":{\"bank\":\"Mandiri\",\"number\":\"1234567890\",\"name\":\"DRCOM Store\"},\"bca\":{\"bank\":\"BCA\",\"number\":\"0987654321\",\"name\":\"DRCOM Store\"}}');
 
 -- --------------------------------------------------------
 

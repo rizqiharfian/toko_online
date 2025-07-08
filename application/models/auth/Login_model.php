@@ -44,7 +44,17 @@ class Login_model extends CI_Model {
 
     public function get_role()
     {
-        return $this->_get('role_id');
+        $user_id = $this->logged_user_id();
+
+        $result = $this->db->select('role_id')
+            ->where('id', $user_id)
+            ->get('users')
+            ->row();
+
+        $role = $result ? $result->role_id : null;
+
+        log_message('error', 'ROLE DARI get_role(): ' . $role);
+        return $role;
     }
 
     public function get_password()

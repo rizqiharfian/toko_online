@@ -74,7 +74,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <div class="input-group-prepend">
                           <span class="input-group-text">Rp</span>
                         </div>
-                        <input type="text" name="price" value="<?php echo set_value('price', $product->price); ?>" class="form-control" id="price">
+                        <input type="text" name="price" value="<?php echo number_format(set_value('price', $product->price), 0, ',', '.'); ?>" class="form-control" id="price">
                       </div>
                         <?php echo form_error('price'); ?>
                     </div>

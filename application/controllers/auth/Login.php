@@ -24,6 +24,7 @@ class Login extends CI_Controller {
     public function do_login()
     {
         $this->form_validation->set_error_delimiters('<div class="text-error">', '</div>');
+         log_message('error', 'LOGIN FORM DIJALANKAN');
 
         $this->form_validation->set_rules('username', 'Username', 'required|min_length[4]|max_length[16]', [
             'min_length' => 'Username minimal 4 karakter',
@@ -48,10 +49,13 @@ class Login extends CI_Controller {
 
             if ($this->login->is_user_exist())
             {
+                   log_message('error', 'USER DITEMUKAN: ' . $username);
                 $user_password = $this->login->get_password();
 
                 if ( password_verify($password, $user_password))
                 {
+                    log_message('error', 'PASSWORD BENAR UNTUK: ' . $username);
+                    
                     $login_data = [
                         'is_login' => TRUE,
                         'user_id' => $this->login->logged_user_id(),
@@ -66,14 +70,20 @@ class Login extends CI_Controller {
                     if ($redirection)
                     {
                         $redir_to = base64_decode($redirection);
-
                         $this->session->unset_userdata('redirection');
                     }
                     else
                     {
                         $role = $this->login->get_role();
+                    log_message('error', 'ROLE PENGGUNA: ' . $role);
 
-                        $redir_to = ($role == 1) ? 'admin' : 'customer';
+                    if ($role == 1) {
+                        $redir_to = 'admin';
+                    } elseif ($role == 2) {
+                        $redir_to = 'customer';
+                    } else {
+                        $redir_to = 'auth/login';
+                    }
                     }
                     
                     if ($remember_me == 1)
@@ -84,7 +94,7 @@ class Login extends CI_Controller {
                     {
                         $this->session->set_userdata('__ACTIVE_SESSION_DATA', $login_session);
                     }
-
+                    log_message('error', 'REDIRECT KE: ' . $redir_to);
                     redirect($redir_to);
                 }
                 else

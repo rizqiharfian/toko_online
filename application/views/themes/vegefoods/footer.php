@@ -64,7 +64,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <div class="row">
         <div class="col-md-12 text-center">
 
-          <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->PREMIUM SHOES STORE <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+          <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->DRCOM Store <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                       </p>
         </div>
       </div>

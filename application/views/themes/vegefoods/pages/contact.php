@@ -18,7 +18,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="w-100"></div>
         <div class="col-md-3 d-flex">
             <div class="info bg-white p-4">
-              <p><span>Alamat </span>Cibatu, Cikarang Selatan ,Kabupaten Bekasi Jawa Barat</p>
+              <p><span>Alamat </span>Rukan Malibu, Jl. Boulevard Raya blok i No.62, RT.RayaRT.7/RW.14, Cengkareng Tim., Cengkareng, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11730</p>
             </div>
         </div>
         <div class="col-md-3 d-flex">
@@ -28,7 +28,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
         <div class="col-md-3 d-flex">
             <div class="info bg-white p-4">
-              <p><span>Email:</span>pshoesstore@gmail.com</p>
+              <p><span>Email:</span>drcomstore@gmail.com</p>
             </div>
         </div>
         

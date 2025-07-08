@@ -7,7 +7,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Premium Shoes Store</title>
+    <title>DRCOM Store</title>
   
     <link rel="stylesheet" href="<?php echo get_theme_uri('plugins/fontawesome-free/css/all.min.css', 'adminlte'); ?>">
     <link rel="stylesheet" href="<?php echo get_theme_uri('plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css', 'adminlte'); ?>">
@@ -52,7 +52,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="<?php echo base_url(); ?>" class="brand-link">
-      <span class="brand-text font-weight-light">Premium Shoes Store</span>
+      <span class="brand-text font-weight-light">DRCOM Store</span>
     </a>
 
     <!-- Sidebar -->
