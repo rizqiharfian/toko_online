@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ?><!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>toko_sepatu</title>
+    <title>Toko Sepatu</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -49,7 +49,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					    </div>
 					    <div class="col-md pr-4 d-flex topper align-items-center">
 					    	<div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
-						    <span class="text">Email Premiumshoesstore@gmail.com</span>
+						    <span class="text">Premiumshoesstore@gmail.com</span>
 					    </div>
 					    <div class="col-md-5 pr-4 d-flex topper align-items-center text-lg-right">
 						    <span class="text">Ayo Segera Belanja Sekarang</span>
