@@ -38,6 +38,16 @@ class Shop extends CI_Controller {
         }
     }
 
+    public function katalog()
+    {
+        $this->load->model('product_category');
+
+        // Ambil semua kategori beserta produk di dalamnya
+        $data['categories'] = $this->product_category->get_all_with_products();
+
+        $this->load->view('shop/katalog', $data);
+    }
+
     public function cart()
     {
         $cart['carts'] = $this->cart->contents();

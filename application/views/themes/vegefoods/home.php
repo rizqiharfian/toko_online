@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 <section id="home-section" class="hero">
     <div class="home-slider owl-carousel">
-    <div class="slider-item" style="background-image: url(<?php echo get_theme_uri('images/bg1.jpg'); ?>);">
+    <div class="slider-item" style="background-image: url(<?php echo get_theme_uri('images/DRCOM.jpg'); ?>);">
         <div class="overlay"></div>
       <div class="container">
         <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
@@ -18,7 +18,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       </div>
     </div>
 
-    <div class="slider-item" style="background-image: url(<?php echo get_theme_uri('images/badminton_3.jpg'); ?>);">
+    <div class="slider-item" style="background-image: url(<?php echo get_theme_uri('images/ATOK.jpg'); ?>);">
         <div class="overlay"></div>
       <div class="container">
         <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
@@ -85,8 +85,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   </section>
 
 
-  <section class="ftco-section">
-  <div class="container">
+  <!-- <section class="ftco-section"> -->
+  <!-- <div class="container">
           <div class="row justify-content-center mb-3 pb-3">
     <div class="col-md-12 heading-section text-center ftco-animate">
         <span class="subheading">Produk Terbaru</span>
@@ -94,8 +94,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <p>Laptop murah berkualitas</p>
     </div>
   </div>   		
-  </div>
-  <div class="container">
+  </div> -->
+  <!-- <div class="container">
       <div class="row">
           <?php if ( count($products) > 0) : ?>
             <?php foreach ($products as $product) : ?>
@@ -139,8 +139,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <?php endif; ?>
 
       </div>
-  </div>
-</section>
+  </div> -->
+<!-- </section> -->
   
   
 

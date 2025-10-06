@@ -3,14 +3,14 @@
 
 $font-primary: 'Poppins',Arial, sans-serif;
 $font-secondary: 'Lora',Georgia, serif;
-$font-tertiary: 'Amatic SC',cursive;
+$font-tertiary: 'Orbitron SC',cursive;
 
 $white: #fff;
 $black: #000000;
 // $darken: #3a4348;
 
-$primary: #82ae46;
-$secondary: #ffe6eb;
+$primary: #001f3f;
+$secondary: #001f3f;
 
 $color-1: #e4b2d6;
 $color-2: #dcc698;
@@ -356,14 +356,16 @@ h1, h2, h3, h4, h5,
 			letter-spacing: 3px;
 			text-transform: uppercase;
 		}
-		.btn-primary{
-			border: 1px solid rgba(255,255,255,.4);
-			@include border-radius(30px);
-			&:hover, &:focus{
-				background: $white !important;
-				color: $black;
-			}
-		}
+		.btn-primary {
+  background: navy !important;  // warna biru navy
+  border: 1px solid navy !important;
+  @include border-radius(30px);
+
+  &:hover, &:focus {
+    background: $white !important;
+    color: navy !important;     // teks berubah jadi navy saat hover
+  }
+}
 	}
 	&.hero-bread{
 		padding: 10em 0;
@@ -760,7 +762,7 @@ h1, h2, h3, h4, h5,
 	}
 	.heading-section-bold{
 		h2{
-			font-size: 40px;
+			font-size: 100px;
 			font-weight: 600;
 			color: $black;
 		}

@@ -13,6 +13,19 @@ class Pages extends CI_Controller {
         ));
     }
 
+    public function katalog()
+{
+    $this->load->model('product_model', 'product');
+    $data['categories'] = $this->product->get_products_grouped_by_category();
+    $data['title'] = 'Katalog Produk | ' . get_store_name();
+
+    get_header($data['title']);
+    get_template_part('pages/katalog', $data);
+    get_footer();
+}
+
+
+
     public function about()
     {
         $params['reviews'] = $this->review->get_all_reviews();

@@ -41,6 +41,28 @@ class Product_model extends CI_Model {
         return $data;
     }
 
+    public function get_products_grouped_by_category()
+{
+    // Ambil semua kategori dari tabel product_category
+    $categories = $this->db->order_by('name', 'ASC')->get('product_category')->result();
+
+    // Jika tidak ada kategori, return array kosong
+    if (!$categories) {
+        return [];
+    }
+
+    // Untuk setiap kategori, ambil produk berdasarkan category_id
+    foreach ($categories as &$cat) {
+        $cat->products = $this->db
+            ->where('category_id', $cat->id)
+            ->get('products')
+            ->result();
+    }
+
+    return $categories;
+}
+
+
     public function related_products($current, $category)
     {
         return $this->db->where(array('id !=' => $current, 'category_id' => $category))->limit(4)->get('products')->result();

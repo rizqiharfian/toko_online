@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
-<div class="hero-wrap hero-bread" style="background-image: url('<?php echo get_theme_uri('images/bg2.jpg'); ?>');">
+<div class="hero-wrap hero-bread" style="background-image: url('<?php echo get_theme_uri('images/DRCOM.jpg'); ?>');">
     <div class="container">
       <div class="row no-gutters slider-text align-items-center justify-content-center">
         <div class="col-md-9 ftco-animate text-center">
@@ -15,7 +15,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <section class="ftco-section ftco-no-pb ftco-no-pt bg-light">
           <div class="container">
               <div class="row">
-                  <div class="col-md-5 p-md-5 img img-2 d-flex justify-content-center align-items-center" style="background-image: url(<?php echo get_theme_uri('images/BG5.jpg'); ?>);">
+                  <div class="col-md-5 p-md-5 img img-2 d-flex justify-content-center align-items-center" style="background-image: url(<?php echo get_theme_uri('images/DRCOM.jpg'); ?>);">
                       <a href="https://vimeo.com/45830194" class="icon popup-vimeo d-flex justify-content-center align-items-center">
                           <span class="icon-play"></span>
                       </a>
@@ -23,12 +23,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                   <div class="col-md-7 py-5 wrap-about pb-md-5 ftco-animate">
             <div class="heading-section-bold mb-4 mt-md-5">
                 <div class="ml-md-0">
-                  <h2 class="mb-4">Selamat Datang di Toko Wijaya Sport</h2>
+                  <h2 class="mb-4">Selamat Datang di DRCOM</h2>
               </div>
             </div>
             <div class="pb-md-5">
-                <p>Belanja sepatu dengan kualaitas terbaik</p>
-                          <p><a href="<?php echo site_url('browse'); ?>" class="btn btn-primary">Belanja sekarang!</a></p>
+                <p>Belanja laptop dengan kualitas terbaik dan aman</p>
+                          <p><a href="<?php echo site_url('#'); ?>" class="btn btn-primary">Belanja sekarang!</a></p>
                       </div>
                   </div>
               </div>

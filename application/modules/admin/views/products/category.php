@@ -39,7 +39,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               <table class="table align-items-center table-flush" id="packageList" style="width: 100%">
                 <thead class="thead-light">
                   <tr>
-                    <th scope="col">#</th>
+                    <th scope="col">No</th>
                     <th scope="col">Nama</th>
                     <th scope="col"></th>
                   </tr>
@@ -70,7 +70,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                   <div class="input-group-prepend">
                                       <span class="input-group-text"><i class="ni ni-box-2"></i></span>
                                   </div>
-                                  <input name="name" class="form-control" placeholder="Nama " type="text" minlength="4" maxlength="255" required>
+                                  <input name="name" class="form-control" placeholder="Nama " type="text" minlength="2" maxlength="255" required>
                                 </div>
                                 <div class="text-danger err name-error"></div>
                           </div>
@@ -132,7 +132,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                   <div class="input-group-prepend">
                                       <span class="input-group-text"><i class="ni ni-box-2"></i></span>
                                   </div>
-                                  <input name="name" class="form-control edit-name" placeholder="Nama paket" type="text" minlength="4" maxlength="100" required>
+                                  <input name="name" class="form-control edit-name" placeholder="Nama paket" type="text" minlength="2" maxlength="100" required>
                                 </div>
                                 <div class="text-danger err name-error"></div>
                           </div>
@@ -243,10 +243,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     var table = $('#packageList').DataTable({
       "ajax" : "<?php echo site_url('admin/products/category_api?action=list'); ?>",
       "columns" : [
-        {"data": "id"},
+        { 
+          "data": null,
+          "render": function (data, type, row, meta) {
+            return meta.row + meta.settings._iDisplayStart + 1;
+          }
+        },
         {"data": "name"},
         {"mRender": function (data, type, row) {
-          return '<div class="text-right"><a href="#" data-id="'+row.id+'" class="btn btn-warning btn-sm btnEdit"><i class="fa fa-edit"></i></a><a href="#" data-id="'+row.id+'" class="btn btn-danger btn-sm btnDelete"><i class="fa fa-trash"></i></a></div>';}
+          return '<div class="text-right">'+
+                '<a href="#" data-id="'+row.id+'" class="btn btn-warning btn-sm btnEdit"><i class="fa fa-edit"></i></a>'+
+                '<a href="#" data-id="'+row.id+'" class="btn btn-danger btn-sm btnDelete"><i class="fa fa-trash"></i></a>'+
+                '</div>';
+          }
         }
       ],
       "language" : {

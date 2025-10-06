@@ -1,12 +1,12 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
-<div class="hero-wrap hero-bread" style="background-image: url('<?php echo get_theme_uri('images/bg1.jpg'); ?>');">
+<div class="hero-wrap hero-bread" style="background-image: url('<?php echo get_theme_uri('images/DRCOM.jpg'); ?>');">
     <div class="container">
       <div class="row no-gutters slider-text align-items-center justify-content-center">
         <div class="col-md-9 ftco-animate text-center">
             <p class="breadcrumbs"><span class="mr-2"><?php echo anchor(base_url(), 'Home'); ?></span> <span>Hubungi Kami</span></p>
-          <h1 class="mb-0 bread">Hubungi Kami</h1>
+          <h2 class="mb-0 bread" style="color: black;">Hubungi Kami</h2>
         </div>
       </div>
     </div>
@@ -16,18 +16,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <div class="container">
         <div class="row d-flex mb-5 contact-info">
         <div class="w-100"></div>
-        <div class="col-md-3 d-flex">
-            <div class="info bg-white p-4">
+        <div class="col-md-6 d-flex">
+            <div class="info bg-white p-14 text-center">
               <p><span>Alamat </span>Rukan Malibu, Jl. Boulevard Raya blok i No.62, RT.RayaRT.7/RW.14, Cengkareng Tim., Cengkareng, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11730</p>
             </div>
         </div>
         <div class="col-md-3 d-flex">
-            <div class="info bg-white p-4">
-              <p><span>WA</span>081287702224</p>
+            <div class="info bg-white p-4 text-center">
+              <p><span>WA</span>0895339233468</p>
             </div>
         </div>
         <div class="col-md-3 d-flex">
-            <div class="info bg-white p-4">
+            <div class="info bg-white p-4 text-center">
               <p><span>Email:</span>drcomstore@gmail.com</p>
             </div>
         </div>
@@ -65,9 +65,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         <div class="col-md-6 d-flex">
             <div style="width: 100%">
-                <iframe width="100%" height="600" src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;coord=-3.7576348,102.2873882&amp;q=Kost%20Indah%20Jaya%20Belakang%20No.%2019%2C%20Jl.%20Medan%20Baru%20VI%2C%20Kandang%20Limun%2C%20Bengkulu+(Toko%20Sayur%2022)&amp;ie=UTF8&amp;t=&amp;z=15&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
-                    <a href="https://www.maps.ie/coordinates.html">find my coordinates</a>
-                </iframe>
+                <iframe width="100%" height="600" 
+    src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;coord=-6.135287,106.7333694&amp;q=Dr.%20Com%20Jakarta&amp;ie=UTF8&amp;t=&amp;z=17&amp;iwloc=B&amp;output=embed" 
+    frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+</iframe>
             </div>
         </div>
       </div>

@@ -71,6 +71,11 @@ if ( ! function_exists('get_user_name'))
         $CI = init();
         $id = get_current_user_id();
 
+        // Jika belum login atau ID kosong
+        if (!$id) {
+            return 'Guest'; // atau kosong ''
+        }
+
         $user = $CI->db->query("
             SELECT u.*, c.*
             FROM users u
@@ -79,9 +84,11 @@ if ( ! function_exists('get_user_name'))
             WHERE u.id = '$id'
         ")->row();
 
-        return $user->name;
+        // Cegah error jika data user tidak ditemukan
+        return $user ? $user->name : 'Guest';
     }
 }
+
 
 if ( ! function_exists('get_user_image'))
 {

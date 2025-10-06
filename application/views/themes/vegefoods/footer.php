@@ -43,7 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <ul class="list-unstyled mr-l-5 pr-l-3 mr-4">
                   <li><a href="<?php echo site_url('shop/cart'); ?>" class="py-2 d-block">Keranjang Belanja</a></li>
                   <li><a href="<?php echo site_url('customer/payments/confirm'); ?>" class="py-2 d-block">Konfirmasi Pembayaran</a></li>
-                  <li><a href="<?php echo site_url('shop/testimonial'); ?>" class="py-2 d-block">Testimoni Pelanggan</a></li>
+                  <li><a href="<?php echo site_url('admin/reviews'); ?>" class="py-2 d-block">Testimoni Pelanggan</a></li>
                 </ul>
               </div>
           </div>
